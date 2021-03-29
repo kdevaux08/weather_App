@@ -1,0 +1,92 @@
+h1,
+h2,
+.mb-3,
+.row,
+.col {
+  font-family: "IBM Plex Mono", monospace;
+}
+
+h1 {
+  color: #12a6ea;
+  line-height: 50px;
+  text-align: left;
+  padding: 5px;
+}
+
+h2 {
+  color: #12a6ea;
+  line-height: 30px;
+  font-size: 35px;
+  font-weight: bolder;
+  text-align: center;
+  padding: 10px;
+}
+
+.card {
+  position: fixed;
+  top: 10px;
+  right: 5px;
+  left: 5px;
+  border-radius: 10px;
+  box-shadow: 10px 5px 10px 5px;
+}
+
+.mb-3 {
+  text-align: center;
+  padding: 10px;
+}
+
+.city {
+  font-size: 75px;
+  font-weight: bolder;
+}
+
+.day {
+  font-size: 35px;
+  font-weight: lighter;
+}
+
+.time {
+  font-size: 35px;
+  padding: 5px;
+  font-weight: lighter;
+}
+
+.temp {
+  font-size: 80px;
+  font-weight: bolder;
+  position: relative;
+  left: 45px;
+  top: 25px;
+}
+
+.fa-cloud-sun {
+  font-size: 175px;
+  top: -5px;
+  position: relative;
+    color: #12a6ea;
+ 
+}
+
+.row {
+  text-align: center;
+}
+
+.days {
+  font-size: 20px;
+  color: #12a6ea;
+  font-weight: bold;
+}
+
+.highLows {
+  font-size: 18px;
+  font-style: italic;
+  color:  #12a6ea;
+}
+
+.icons {
+  color: #12a6ea;
+  font-size: 40px;
+  position: relative;
+  bottom: -5px;
+}
