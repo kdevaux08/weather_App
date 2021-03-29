@@ -18,27 +18,14 @@ function formatDate(date) {
     "Friday",
     "Saturday",
   ];
-  let monthIndex = date.getMonth();
-  let months = [
-    "Jan",
-    "Feb",
-    "March",
-    "April",
-    "May",
-    "June",
-    "July",
-    "Aug",
-    "Sept",
-    "Oct",
-    "Nov",
-    "Dec",
-  ];
-
-  let month = months[monthIndex];
-  let currentDate = date.getDate();
   let day = days[dayIndex];
-  return `${day} ${month} ${currentDate} ${hours}:${minutes}`;
+
+  return `${day} ${hours}:${minutes}`;
 }
+
+let dateElement = document.querySelector("#current");
+let currentTime = new Date();
+dateElement.innerHTML = formatDate(currentTime);
 
 function displayWeatherCondition(response) {
   document.querySelector("#city").innerHTML = response.data.name;
@@ -68,10 +55,6 @@ function getCurrentLocation(event) {
   event.preventDefault();
   navigator.geolocation.getCurrentPosition(searchLocation);
 }
-let dateElement = document.querySelector("#current");
-let currentTime = new Date();
-dateElement.innerHTML = formatDate(currentTime);
-
 let searchForm = document.querySelector("#city-form");
 searchForm.addEventListener("submit", handleSubmit);
 
