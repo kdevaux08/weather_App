@@ -1,3 +1,7 @@
+body {
+  background-color: #f9f7fe;;
+}
+
 h1,
 h2,
 .mb-3,
@@ -8,24 +12,34 @@ h2,
 
 h1 {
   color:#c06c84;
-  line-height: 45px;
-  text-align: left;
+  line-height: 65px;
+  text-align: center;
+  font-weight: bolder;
+}
+ul {
+  margin: 0;
+  padding: 0;
+
+}
+li {
+  list-style-type: none;
+  color:#c06c84;
+  text-align: center;
+  line-height: 20px;
 }
 
-h2 {
-  color: #6C5B7B;
-  line-height: 30px;
-  font-size: 35px;
-  font-weight: bolder;
+
+h5 {
   text-align: center;
   padding: 10px;
 }
-
+.weatherApp{
+  max-width: 700px;
+  margin: 30px auto;
+  padding: 15px;
+}
 .card {
   background-color: #F9f1f1;
-  top: 10px;
-  right: 5px;
-  left: 5px;
   border: 2px solid #355C7D;
   border-radius: 10px;
   box-shadow: 3px 3px 3px 3px #355c7d;
@@ -34,50 +48,67 @@ h2 {
 .mb-3 {
   text-align: center;
   padding: 10px;
+  border-color:#355c7d;;
 }
 
-.fa-cloud-sun {
-  font-size: 150px;
-  position: relative;
-  left: 55px;
-  top: -40px;
-}
 .city {
   font-size: 55px;
   font-weight: bolder;
   padding: 5px;
 }
-
-.day {
-  font-size: 35px;
-  font-weight: lighter;
-  padding: 5px;
+.dayTime{
+ color: #F67280;
+ font-size: 40px;
+ font-weight: lighter;
 }
-
-.time {
-  font-size: 35px;
-  padding: 5px;
-  font-weight: lighter;
+.description {
+color:#355c7d;
+font-weight: normal;
+position: relative;
+bottom: -5px;
 }
-
-.temp {
-  font-size: 80px;
-  font-weight: bolder;
+.wind{
+color:#355c7d;
+font-weight: lighter;
+}
+.precipitation{
+  color:#355c7d;
+font-weight: lighter;
+}
+.weatherAttributes{
   position: relative;
-  left: 75px;
-  top: 25px;
+  top: 8px;
+}
+.currentWeather{
+  color: #F67280;
+  text-align: right;
+  font-size: 75px;
+  font-weight: lighter;
 }
 
+.units{
+  font-size: 20px;
+  position: relative;
+  top: -45px;
+  left: -10px;
+  font-weight: bold;
+}
 .btn-primary {
   color: #F8B195;
   background-color: #355c7d;
   border-color: #355c7d;
 }
-
-.row {
-  text-align: center;
+.btn-primary:hover{
+  background-color:#F8B195;
+color: #355c7d;
+  border-color: #355c7d;
 }
-
+.forecast {
+  padding: 20px 0px;
+  line-height: 20px;
+  text-align: center;
+  
+}
 .days {
   font-size: 20px;
   color: #F67280;
@@ -87,7 +118,7 @@ h2 {
 .highLows {
   font-size: 18px;
   font-style: italic;
-  color: #6C5B7B
+  color: #6C5B7B;
 }
 
 .icons {
@@ -97,9 +128,3 @@ h2 {
   bottom: -5px;
 }
 
-h5 {
-  padding: 15px;
-  line-height: 25px;
-  text-align: center;
-
-}
