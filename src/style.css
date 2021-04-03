@@ -88,7 +88,7 @@ bottom: -5px;
 .units{
   font-size: 20px;
   position: relative;
-  top: -45px;
+  top: -55px;
   left: -10px;
   font-weight: bold;
 }
@@ -111,19 +111,19 @@ color: #355c7d;
   border-color: #355c7d;
 }
 .forecast {
-  padding: 20px 0px;
-  line-height: 20px;
   text-align: center;
+  position: relative;
+  top: 20px;
   
 }
 .days {
-  font-size: 20px;
+  font-size: 25px;
   color: #F67280;
   font-weight: bold;
 }
 
 .highLows {
-  font-size: 18px;
+  font-size: 16px;
   font-style: italic;
   color: #6C5B7B;
 }
@@ -132,7 +132,7 @@ color: #355c7d;
   color: #F8b195;
   font-size: 40px;
   position: relative;
-  bottom: -5px;
+  bottom:10px;
 }
 
 #weatherDescription{
