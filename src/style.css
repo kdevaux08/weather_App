@@ -23,7 +23,6 @@ ul {
 }
 li {
   list-style-type: none;
-  color:#c06c84;
   text-align: center;
   line-height: 20px;
 }
@@ -63,21 +62,16 @@ h5 {
 }
 .description {
 color:#355c7d;
-font-weight: normal;
+font-weight: bold;
 position: relative;
 bottom: -5px;
 }
-.wind{
-color:#355c7d;
-font-weight: lighter;
-}
-.precipitation{
-  color:#355c7d;
-font-weight: lighter;
-}
+
 .weatherAttributes{
+  color:#355c7d;
   position: relative;
   top: 8px;
+  font-weight: lighter;
 }
 .currentWeather{
   color: #F67280;
@@ -87,7 +81,7 @@ font-weight: lighter;
 }
 
 .units{
-  font-size: 20px;
+  font-size: 15px;
   position: relative;
   top: -45px;
   left: -10px;
@@ -128,3 +122,12 @@ color: #355c7d;
   bottom: -5px;
 }
 
+#weatherDescription{
+  text-transform: capitalize;
+}
+#weatherPrecipitation{
+  text-transform: capitalize;
+}
+#weatherHumidity{
+  text-transform: capitalize;
+}

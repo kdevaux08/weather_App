@@ -53,21 +53,27 @@
              <ul>
               <li class ="dayTime">
               <div id="current">
-              <span class="day"></span><span class="time"></span>
+              <span class="day"> 
+
+              </span> <span class="time"></span>
               </div>
               </li>
               <div class ="weatherAttributes">
-            <li class ="description"> Overcast 
+            <li class ="description" id ="weatherDescription"> 
               </li>
-              <li class ="precipitation">
-                90% Precipitation <span class ="humidity"> Humditity: 70% </span><span class ="wind">Wind:9mph </span>
-              </li>
+              <li class ="weatherDetails" id ="weatherDetails">
+            Sunrise:<span id="sunrise"> </span> Sunset:<span id ="sunset"></span> 
+            </li>
+            <li>
+          Humidity:<span class = "humidity" id = "weatherHumidity"></span>%
+          Wind:<span class ="wind" id="weatherWind"></span>mph
+          </li>
               </div>
              </ul>
               </div>
               <div class ="col-6">
             <div class ="currentWeather">
-           <i class="fas fa-cloud-sun"> </i><span class="temperature" id="temperature"></span><span class="units">°F|°C</span>
+           <i class="fas fa-cloud-sun"> </i><span class = "temperature" id="temperature"></span><span class ="units" id="units">°F|°C</span>
               </div>
             </div>
         </div>
