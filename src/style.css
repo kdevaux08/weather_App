@@ -26,7 +26,13 @@ li {
   text-align: center;
   line-height: 20px;
 }
-
+a {
+  text-decoration: none;
+  color: #355C7D; ;
+}
+a:hover{
+  color:  #F67280;
+}
 h5 {
   text-align: center;
   padding: 10px;
@@ -87,6 +93,13 @@ bottom: -5px;
   font-weight: bold;
 }
 
+.currentWeather .active {
+  color: #F67280;
+  text-decoration: none;
+}
+.currentWeather .active:hover {
+  text-decoration: none;
+}
 .btn-primary {
   color: #F8B195;
   background-color: #355c7d;
