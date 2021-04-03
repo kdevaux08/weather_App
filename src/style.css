@@ -74,14 +74,15 @@ bottom: -5px;
   font-weight: lighter;
 }
 .currentWeather{
-  color: #F67280;
+  color: #6C5B7B;
   text-align: right;
   font-size: 75px;
   font-weight: lighter;
 }
 
 .units{
-  font-size: 15px;
+  color: #F67280;
+  font-size: 20px;
   position: relative;
   top: -45px;
   left: -10px;
