@@ -48,10 +48,11 @@ dateElement.innerHTML = formatDate(currentTime);
 function displayWeatherCondition(response) {
   let iconElement = document.querySelector("#currentIcon");
   document.querySelector("#city").innerHTML = response.data.name;
-  let fahrenheitTemperature = response.data.main.temp;
+  fahrenheitTemperature = response.data.main.temp;
   document.querySelector("#temperature").innerHTML = Math.round(
     fahrenheitTemperature
   );
+
   document.querySelector("#weatherDescription").innerHTML =
     response.data.weather[0].description;
   document.querySelector("#sunrise").innerHTML = showUpdate(

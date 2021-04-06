@@ -1,5 +1,5 @@
 body {
-  background-color: #f9f7fe;;
+  background-color: #f0ffff;
 }
 
 h1,
@@ -69,15 +69,16 @@ h5 {
 color:#355c7d;
 font-weight: bold;
 position: relative;
-bottom: -5px;
+bottom: 5px;
 }
 
 .weatherAttributes{
   color:#355c7d;
   position: relative;
-  top: 8px;
+  top: 10px;
   font-weight: lighter;
 }
+
 .currentWeather{
   color: #6C5B7B;
   text-align: right;
