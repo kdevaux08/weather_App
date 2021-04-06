@@ -48,8 +48,9 @@ dateElement.innerHTML = formatDate(currentTime);
 function displayWeatherCondition(response) {
   let iconElement = document.querySelector("#currentIcon");
   document.querySelector("#city").innerHTML = response.data.name;
+  let fahrenheitTemperature = response.data.main.temp;
   document.querySelector("#temperature").innerHTML = Math.round(
-    response.data.main.temp
+    fahrenheitTemperature
   );
   document.querySelector("#weatherDescription").innerHTML =
     response.data.weather[0].description;
@@ -68,7 +69,6 @@ function displayWeatherCondition(response) {
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
-  console.log(response.data);
 }
 
 function searchCity(city) {
@@ -93,10 +93,33 @@ function handleSubmit(event) {
   searchCity(city);
 }
 
+function displayFahrenheitTemperature(event) {
+  event.preventDefault();
+  fahrenheitLink.classList.add("active");
+  celsiusLink.classList.remove("active");
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+}
+
+function displayCelsiusTemperature(event) {
+  event.preventDefault();
+  let temperatureConversion = document.querySelector("#temperature");
+  fahrenheitLink.classList.remove("active");
+  celsiusLink.classList.add("active");
+  let celsiusTemperature = ((fahrenheitTemperature - 32) * 5) / 9;
+  temperatureConversion.innerHTML = Math.round(celsiusTemperature);
+}
+searchCity("New York");
+
+let fahrenheitTemperature = null;
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
+
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", displayCelsiusTemperature);
+
 let searchForm = document.querySelector("#city-form");
 searchForm.addEventListener("submit", handleSubmit);
 
 let currentLocationButton = document.querySelector("#current-location");
 currentLocationButton.addEventListener("click", getCurrentLocation);
-
-searchCity("New York");
