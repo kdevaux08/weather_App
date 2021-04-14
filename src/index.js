@@ -43,7 +43,27 @@ function showUpdate(timestamp) {
 }
 let dateElement = document.querySelector("#current");
 let currentTime = new Date();
-dateElement.innerHTML = formatDate(currentTime);
+
+function displayForecast() {
+  let forecastElement = document.querySelector("#fiveDay");
+  let days = ["Tue", "Wed", "Thur", "Fri", "Sat"];
+  let forecastHTML = `<div class = "row">`;
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="col">
+        <div class="days">${day}</div>
+        <div class="weather-forecast-temperatures">
+          <span class="highLows">35°|</span><span class="highLows"><strong>20°</strong></span>
+          <div class ="icons"><img src ="http://openweathermap.org/img/wn/13n@2x.png"></div>
+        </div>
+      </div>
+  `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
 
 function displayWeatherCondition(response) {
   let iconElement = document.querySelector("#currentIcon");
@@ -110,7 +130,6 @@ function displayCelsiusTemperature(event) {
   let celsiusTemperature = ((fahrenheitTemperature - 32) * 5) / 9;
   temperatureConversion.innerHTML = Math.round(celsiusTemperature);
 }
-searchCity("New York");
 
 let fahrenheitTemperature = null;
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
@@ -124,3 +143,5 @@ searchForm.addEventListener("submit", handleSubmit);
 
 let currentLocationButton = document.querySelector("#current-location");
 currentLocationButton.addEventListener("click", getCurrentLocation);
+searchCity("Minneapolis");
+displayForecast();
