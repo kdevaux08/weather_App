@@ -87,7 +87,9 @@ function displayWeatherCondition(response) {
   document.querySelector("#temperature").innerHTML = Math.round(
     fahrenheitTemperature
   );
-
+  document.querySelector("#current").innerHTML = formatDate(
+    response.data.dt * 1000
+  );
   document.querySelector("#weatherDescription").innerHTML =
     response.data.weather[0].description;
   document.querySelector("#sunrise").innerHTML = showUpdate(
